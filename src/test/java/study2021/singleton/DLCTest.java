@@ -1,4 +1,4 @@
-package com.example.springbootdemo2021.singleton;
+package study2021.singleton;
 
 /**
  * @Describe 双重检查懒汉式，双重锁：double lock check，推荐
