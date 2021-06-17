@@ -9,7 +9,7 @@ import java.util.ArrayList;
  **/
 public class ListTest {
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         ArrayList<String> listA = new ArrayList<String>();
         listA.add("Tom");
         listA.add("Las");
@@ -24,5 +24,12 @@ public class ListTest {
             System.out.println("这两个集合没有相同的交集");
             System.out.println(listA.toString());
         }
+    }
+
+    public static void main(String[] args) {
+        String code = "123";
+        String sql = "SELECT external_index_code,device_name,longitude,latitude FROM dw_crossing_info "
+                + "where external_index_code in (" + code + ")";
+        System.out.println(sql);
     }
 }
