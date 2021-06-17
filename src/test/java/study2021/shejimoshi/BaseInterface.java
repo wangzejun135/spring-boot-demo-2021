@@ -7,4 +7,5 @@ package study2021.shejimoshi;
  **/
 public interface BaseInterface extends BaseInterfaceA, BaseInterfaceB {
     public void signIn();
+
 }
