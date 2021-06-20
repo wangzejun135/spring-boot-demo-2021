@@ -2,6 +2,7 @@ package com.example.springbootdemo2021.service.impl;
 
 import com.example.springbootdemo2021.mapper.UserMapper;
 import com.example.springbootdemo2021.model.UserDO;
+import com.example.springbootdemo2021.rabbitmq.MsgProducer;
 import com.example.springbootdemo2021.service.IUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +22,10 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    private MsgProducer msgProducer;
+
+
     @Override
     public int deleteByPrimaryKey(Long id) {
         return userMapper.deleteByPrimaryKey(id);
@@ -39,5 +44,10 @@ public class UserServiceImpl implements IUserService {
     @Override
     public int updatePhone(Long id, String phone) {
         return userMapper.updatePhone(id, phone);
+    }
+
+    @Override
+    public void sendMessage() {
+        msgProducer.sendMsg("我是一条消息20210509");
     }
 }

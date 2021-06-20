@@ -16,4 +16,9 @@ public interface IUserService {
     UserDO selectByPrimaryKey(Long id);
 
     int updatePhone(Long id, String phone);
+
+    /**
+     * 发送MQ
+     */
+    void sendMessage();
 }
