@@ -1,7 +1,7 @@
 package com.example.springbootdemo2021.util;
 
 /**
- * @Describe
+ * @Describe 常量类
  * @Author wangzejun
  * @Date 2021/5/9 15:54
  */
