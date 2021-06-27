@@ -9,9 +9,8 @@
  * 修改内容:  <修改内容>
  */
 package com.example.springbootdemo2021.util;
-
 /**
- * <一句话功能简述> <功能详细描述>
+ * 服务终端码
  * 
  * @author 吴飞00106856
  * @version [1.0, 2009-3-17]

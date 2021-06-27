@@ -26,11 +26,6 @@ public class ShaEncryptTools
     
     /**
      * SHA具体加密算法
-     * 
-     * @author wangzejun
-     * @param strSrc
-     * @param encName
-     * @return strDes
      */
     public static String Encrypt(String strSrc, String encName)
     {
@@ -56,10 +51,6 @@ public class ShaEncryptTools
     
     /**
      * 字节转码
-     *
-     * @author wangzejun
-     * @param bts
-     * @return des
      */
     public static String bytes2Hex(byte[] bts)
     {

@@ -1,6 +1,6 @@
 package com.example.springbootdemo2021.configuration;
 
-import com.example.springbootdemo2021.util.StringUtils;
+import com.example.springbootdemo2021.util.StrUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +23,7 @@ public class HelloController {
     @GetMapping("/say")
     public String say() {
         String str = redisTemplate.opsForValue().get("mykey");
-        if (StringUtils.isEmpty(str)) {
+        if (StrUtil.isEmpty(str)) {
             str = "我是空值";
             redisTemplate.opsForValue().set("mykey", "我是无效缓存");
         }

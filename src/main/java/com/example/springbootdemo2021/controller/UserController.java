@@ -3,17 +3,12 @@ package com.example.springbootdemo2021.controller;
 import com.example.springbootdemo2021.entity.UserResponse;
 import com.example.springbootdemo2021.model.UserDO;
 import com.example.springbootdemo2021.service.IUserService;
-import com.example.springbootdemo2021.util.StringUtils;
+import com.example.springbootdemo2021.util.StrUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-
-
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.text.SimpleDateFormat;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -81,12 +76,12 @@ public class UserController {
         try{
             String phone = userDO.getPhone();
             String name = userDO.getName();
-            if (StringUtils.isEmpty(name)) {
+            if (StrUtil.isEmpty(name)) {
                 response.setStatus("false");
                 response.setMessage("name is null");
                 return response;
             }
-            if (StringUtils.isEmpty(phone)) {
+            if (StrUtil.isEmpty(phone)) {
                 response.setStatus("false");
                 response.setMessage("phone is null");
                 return response;
