@@ -1,6 +1,6 @@
 package study2021.list;
 
-import study2021.bean.TouchNetPointPO;
+import study2021.bean.TestPO;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -31,16 +31,16 @@ public class ListTest1123 {
 
 
     public static void main2(String[] args) throws InterruptedException {
-        List<TouchNetPointPO> poList = new LinkedList<>();
-        TouchNetPointPO po = new TouchNetPointPO();
+        List<TestPO> poList = new LinkedList<>();
+        TestPO po = new TestPO();
         po.setCertificateId("11");
         po.setFaceTime("2021-06-18 03:12:22");
         po.setName("张三");
-        TouchNetPointPO po2 = new TouchNetPointPO();
+        TestPO po2 = new TestPO();
         po2.setCertificateId("11");
         po2.setFaceTime("2021-06-18 04:12:22");
         po2.setName("张三");
-        TouchNetPointPO po3 = new TouchNetPointPO();
+        TestPO po3 = new TestPO();
         po3.setCertificateId("22");
         po3.setFaceTime("2021-06-18 05:15:22");
         po3.setName("王五");
@@ -50,12 +50,12 @@ public class ListTest1123 {
         poList.add(po);
 
         // 人数, 根据身份证号去重
-        List<TouchNetPointPO> personList = poList.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(() ->
-                new TreeSet<>(Comparator.comparing(TouchNetPointPO::getCertificateId))), ArrayList::new));
+        List<TestPO> personList = poList.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(() ->
+                new TreeSet<>(Comparator.comparing(TestPO::getCertificateId))), ArrayList::new));
         // 升序
         //personList = personList.stream().sorted(Comparator.comparing(TouchNetPointPO::getFaceTime)).collect(Collectors.toList());
         // 降序
-        personList = personList.stream().sorted(Comparator.comparing(TouchNetPointPO::getFaceTime).reversed()).collect(Collectors.toList());
+        personList = personList.stream().sorted(Comparator.comparing(TestPO::getFaceTime).reversed()).collect(Collectors.toList());
         System.out.println(personList);
 
     }

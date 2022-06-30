@@ -4,6 +4,8 @@
  */
 package com.example.springbootdemo2021.util;
 
+import com.google.common.base.CaseFormat;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -656,6 +658,42 @@ public class StrUtil {
             return true;
         }
         return false;
+    }
+
+    /**
+     * 字符串处理为数据库格式, 例：strToInt 转换为 str_to_int
+     */
+    public static String getBuildLowerName(String name) {
+        return CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE,
+                name).toLowerCase();
+    }
+
+    public static void main(String[] args) {
+        String aa = getBuildLowerName("strToInt");
+        System.out.println(aa);
+        String str = "strToInt";
+        str = str.toLowerCase();
+        System.out.println(str);
+
+        StringBuilder sb = new StringBuilder();
+        int ii = 9;
+        double ff= 9.99;
+        String ss = "str";
+        sb.append(ii).append(ff).append(ss);
+        System.out.println("sb = " + sb.toString());
+
+        String field = "varchar(64)";
+        String fieldaa = field.substring(0, field.indexOf("("));
+        System.out.println("0512:" + fieldaa);
+
+        StringBuilder sbs = new StringBuilder();
+        sbs.append(fieldaa);
+        System.out.println("aaa:" + sbs.toString());
+
+        StringBuilder sbss = new StringBuilder();
+        sbss.append(field, 0, field.indexOf("("));
+        System.out.println("bbb:" + sbss.toString());
+
     }
 
 }
