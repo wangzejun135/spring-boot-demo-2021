@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.springbootdemo2021.mapper.UserMapper">
+<mapper namespace="start.mapper.UserMapper">
 
-    <resultMap id="RM-USER" type="com.example.springbootdemo2021.model.UserDO">
+    <resultMap id="RM-USER" type="start.model.UserDO">
         <result property="id" column="id" jdbcType="BIGINT"/>
         <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
         <result property="gmtModified" column="gmt_modified" jdbcType="TIMESTAMP"/>

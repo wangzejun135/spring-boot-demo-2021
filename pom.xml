@@ -119,6 +119,24 @@
             <artifactId>guava</artifactId>
             <version>25.0-jre</version>
         </dependency>
+        <!--MemCache-->
+        <dependency>
+            <groupId>com.googlecode.xmemcached</groupId>
+            <artifactId>xmemcached</artifactId>
+            <version>2.4.6</version>
+        </dependency>
+
+        <!-- 静态资源服务器, 支持文件上传下载-->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>8.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
 
     </dependencies>
 

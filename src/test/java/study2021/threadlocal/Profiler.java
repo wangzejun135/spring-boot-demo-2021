@@ -1,6 +1,6 @@
 package study2021.threadlocal;
 
-import com.example.springbootdemo2021.util.SleepUtils;
+import start.util.SleepUtils;
 import org.junit.Test;
 
 /**
