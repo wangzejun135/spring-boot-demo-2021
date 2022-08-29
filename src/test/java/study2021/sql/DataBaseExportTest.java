@@ -26,7 +26,7 @@ public class DataBaseExportTest {
         String className = "org.postgresql.Driver";
         String url = "jdbc:postgresql://127.0.0.1:5432/DBXXX?useUnicode=true&characterEncoding=UTF-8&useSSL=true";
         String userName = "postgres";
-        String password = "Hik@12345+";
+        String password = "xxx";
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setDriverClassName(className);
         hikariConfig.setJdbcUrl(url);
